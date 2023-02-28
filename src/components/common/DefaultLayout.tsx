@@ -9,11 +9,11 @@ interface IDefaultLayout {
 }
 
 function DefaultLayout({ children, title }: IDefaultLayout & PropsWithChildren<{}>) {
-   const defaultTitle = 'Currency Converter & Exchange Rate | Ratchapol'
+   const defaultTitle = 'Foreign Exchange Rate by Ratchapol'
 
    return (
       <>
-         <Header title={defaultTitle} description="Convert your currency and check your current exchange rate" />
+         <Header title={defaultTitle} description="Convert your currency and check the foreign exchange rate" />
          <header>
             <Navbar title="RATCHAPOL" />
          </header>

@@ -1,25 +1,26 @@
 import { PropsWithChildren } from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
-import { Container } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 interface IDefaultLayout {
    title?: string;
 }
 
 function DefaultLayout({ children, title }: IDefaultLayout & PropsWithChildren<{}>) {
-   const defaultTitle = 'Currency Exchange by Ratchapol'
+   const defaultTitle = 'Currency Converter & Exchange Rate | Ratchapol'
 
    return (
       <>
-         <Header title={defaultTitle} description="" />
+         <Header title={defaultTitle} description="Convert your currency and check your current exchange rate" />
          <header>
-            <Navbar title="EXCHANGE" />
+            <Navbar title="RATCHAPOL" />
          </header>
          <main>
-            <Container maxWidth="xl" sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Box sx={{ flexGrow: 1 }}>
                {children}
-            </Container>
+            </Box>
          </main>
       </>
    );

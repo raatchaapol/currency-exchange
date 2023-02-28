@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    container_name: 'exchangerate-frontend'
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+    restart: always

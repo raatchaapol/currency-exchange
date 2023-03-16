@@ -4,6 +4,14 @@ import { Kanit } from "@next/font/google";
 
 const kanitFont = Kanit({ subsets: ['thai'], weight: ['200', '300', '400', '500', '600', '800'], display: 'swap' })
 
+const MuiInputBase = {
+   styleOverrides: {
+      root: {
+         color: deepPurple['A700'],
+      }
+   }
+}
+
 export const theme = createTheme({
    typography: {
       fontFamily: kanitFont.style.fontFamily,
@@ -13,4 +21,7 @@ export const theme = createTheme({
          main: deepPurple['A700'],
       }
    },
+   components: {
+      MuiInputBase,
+   }
 });
